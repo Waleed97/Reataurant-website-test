@@ -5,12 +5,12 @@ angular.module('common')
 .service('MenuService', MenuService);
 
 
-MenuService.$inject = ['$http', 'ApiPath'];
-function MenuService($http, ApiPath) {
+MenuService.$inject = ['$http'];
+function MenuService($http) {
   var service = this;
 
   service.getCategories = function () {
-    return $http.get(ApiPath + '/categories.json').then(function (response) {
+    return $http.get('https://davids-restaurant.herokuapp.com').then(function (response) {
       return response.data;
     });
   };
