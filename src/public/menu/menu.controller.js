@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('public')
-  .controller(MenuController,'MenuController');
+  .controller('MenuController',MenuController);
 
   MenuController.$inject=['menuCategories'];
 
