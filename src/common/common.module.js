@@ -1,6 +1,8 @@
 (function() {
 "use strict";
 
-angular.module('common', []);
+angular.module('common', [])
+.constant('ApiPath', 'https://davids-restaurant.herokuapp.com')
+.config(config);
 
 })();
