@@ -1,16 +1,16 @@
-<!-- {{menuCtrl.menuCategories}}
- -->
+{{menuCtrl.menuCategories}}
+
 <div class="container">
   <h2 id="menu-categories-title" class="text-center">Menu Categories</h2>
   <div class="text-center">
     Substituting white rice with brown rice or fried rice after 3:00pm will be $1.50 for a pint and $2.50 for a quart.
   </div>
 
-  <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12" ng-repeat="menuCategories in menuCtrl.menuCategories"> 
+  <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12" ng-repeat="menuCategories in menuCtrl.menuCategories">
     <a href="#">
       <div class="category-tile">
-        <img width="200" height="200" src="images/menu/A/A.jpg" alt="something">
-        <span>Soup</span>
+        <img width="200" height="200" src="images/menu/{{menuCategories.short_name}}/{{menuCategories.short_name}}.jpg" alt={{menuCategories.short_name}}>
+        <span>{{menuCategories.name}}</span>
       </div>
     </a>
   </div>
