@@ -33,13 +33,13 @@ function routeConfig ($stateProvider) {
     .state('public.menuitems', {
       url: '/menu/{categoryShortName}',
       templateUrl: 'src/public/menu/menu-items.html',
-      // controller: 'MenuController',
-      // controllerAs:'menuCtrl',
-      // resolve: {
-      //   menuCategories: ['MenuService',function (MenuService) {
-      //     return MenuService.getCategories();
-      //   }]
-      // }
+      controller: 'MenuItemsController',
+      controllerAs:'menuItemsCtrl',
+      resolve: {
+        menuItems: ['$stateParams','MenuService',function ($stateParams,MenuService) {
+          return MenuService.getMenuItems($stateParams.categoryShortName);
+        }]
+      }
     });
 }
 })();
