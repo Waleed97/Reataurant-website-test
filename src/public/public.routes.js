@@ -29,6 +29,17 @@ function routeConfig ($stateProvider) {
           return MenuService.getCategories();
         }]
       }
+    })
+    .state('public.menuitems', {
+      url: '/menu/{categoryShortName}',
+      templateUrl: 'src/public/menu/menu-items.html',
+      // controller: 'MenuController',
+      // controllerAs:'menuCtrl',
+      // resolve: {
+      //   menuCategories: ['MenuService',function (MenuService) {
+      //     return MenuService.getCategories();
+      //   }]
+      // }
     });
 }
 })();
